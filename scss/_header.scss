@@ -1,0 +1,63 @@
+@import "variables";
+@import "helper";
+
+.header-container header {
+  padding-top: 60px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid $borderLight;
+}
+
+#masthead {
+  background: $bgGray;
+  height: 1050px;
+}
+
+.logo{
+  @include inline-block;
+  margin: 0;
+
+  a {
+    font: $fontBold;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: $fontDarkGray;
+    opacity: 1;
+    @include prefixify(transition, all 250ms ease-in-out);
+    &:hover {
+      opacity: 0.7;
+    }
+    &:after {
+      @include dot(0.5);
+    }
+  }
+}
+
+nav {
+  ul {
+    margin: 0;
+  }
+
+  li {
+    @include inline-block;
+    position: relative;
+    padding: .4em;
+  }
+
+  a {
+    font-size: $fontSize * 1.1;
+    color: $fontDarkGray;
+    font-weight: 400;
+    padding: .3em 1.2em;
+    @include prefixify(border-radius, 3px);
+    @include prefixify(transition, all 250ms ease-in-out);
+    white-space: nowrap;
+    &.active {
+      background: $blue;
+      color: $white;
+    }
+    &:hover {
+      color: $white;
+      background: $bgGrayHover;
+    }
+  }
+}

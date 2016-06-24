@@ -1,0 +1,231 @@
+@import "variables";
+@import "helper";
+
+html{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 2em;
+  font-family: $font;
+  font-size: $fontSize;
+  font-weight: normal;
+  background: $bgLightGray;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: $fontBold;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: -1px;
+  margin: .5em 0 .5em;
+}
+
+h1 {
+  font-size: $fontSize * 2.4;
+}
+
+h2 {
+  font-size: $fontSize * 2;
+}
+
+h3 {
+  font-size: $fontSize * 1.6;
+}
+
+h4 {
+  font-size: $fontSize * 1.2;
+}
+
+h5 {
+  font-size: $fontSize * 0.8;
+}
+
+h6 {
+  font-size: $fontSize;
+}
+
+p {
+  margin: 1em 0;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: lighten($fontDarkGray, 20%)
+}
+
+.color-hover{
+  @include prefixify(transition, all 250ms ease-in-out);
+  &:hover {
+    color: $blue;
+    cursor: pointer;
+  }
+}
+
+.no-bullet {
+  list-style-type: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.clearfix {
+  &:before,
+  &:after{
+    content: " ";
+    display: table;
+  }
+  &:after {
+    display: block;
+  }
+}
+
+.strikethrough {
+  text-decoration: line-through;
+  color: $fontTanGray;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.cta {
+  margin-top: 18%;
+  padding-bottom: 5%;
+  font-size: $fontSize * 1.125;
+  color: #fff;
+  h2 {
+    font-size: $fontSize * 4.5;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1.5em;
+    letter-spacing: -2px;
+  }
+  h3 {
+    color: $fontTanGray;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0;
+  }
+}
+
+.third {
+  width: 30%;
+  margin-right: 2%;
+  @include inline-block;
+  vertical-align: top;
+  &.third.last {
+    margin-right: 0;
+  }
+}
+
+.two-third {
+  width: 60%;
+  margin-right: 5%;
+  @include inline-block;
+}
+
+.wrapper {
+  width: 82%;
+  margin: 0 auto;
+}
+
+.main-container {
+  padding: 3% 0;
+}
+
+.main-content {
+  width: 65%;
+  @include inline-block;
+  &.full {
+    width: 100%;
+    float: none;
+  }
+
+  h3{
+    font: $fontBold;
+    font-weight: 600;
+  }
+}
+
+.bluedot {
+  &:after {
+    @include dot(0.4);
+    margin-left: 2px;
+  }
+}
+
+.title {
+  h2 {
+    @include inline-block;
+    font-size: $fontSize * 3;
+    &:after {
+      @include dot(0.5);
+    }
+  }
+  .lead {
+    font-family: $fontSerif;
+    letter-spacing: -1px;
+    font-style: italic;
+    font-size: $fontSize * 1.2;
+    color: $fontMedGray;
+  }
+}
+
+.three-fourths {
+  width: 74%;
+  margin-right: 1%;
+  @include inline-block;
+}
+
+.half {
+  width: 45%;
+  margin-right: 5%;
+  @include inline-block;
+  vertical-align: top;
+  &.last {
+    margin-right: 0;
+    padding: .5em 0  0 3%;
+    border-left: 1px solid $borderLight;
+  }
+}
+
+.right-aside {
+  @include inline-block;
+  vertical-align: top;
+  width: 25%;
+  border-left: 1px solid $borderDark;
+  padding-left: 4%;
+  margin-left: 4%;
+  ul {
+    padding: 0;
+    font-size: $fontSize * .9;
+    white-space: nowrap;
+  }
+  li:before {
+    content: '\2192';
+    color: $blue;
+    @include inline-block;
+  }
+  li{
+    line-height: 2rem;
+    a {
+      @include prefixify(transition, 250ms all ease-in-out);
+    }
+    &:hover a {
+      color: $blue;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import 'helper';
+
+@-webkit-keyframes logoShake {
+  0% { -webkit-transform: rotate(7deg); }
+  20% { -webkit-transform: rotate(-7deg); }
+  40% { -webkit-transform: rotate(7deg); }
+  60% { -webkit-transform: rotate(-7deg); }
+  80% { -webkit-transform: rotate(7deg); }
+  100% { -webkit-transform: rotate(0deg); }
+}
+@-moz-keyframes logoShake {
+  0% { -moz-transform: rotate(7deg); }
+  20% { -moz-transform: rotate(-7deg); }
+  40% { -moz-transform: rotate(7deg); }
+  60% { -moz-transform: rotate(-7deg); }
+  80% { -moz-transform: rotate(7deg); }
+  100% { -moz-transform: rotate(0deg); }
+}
+@-o-keyframes logoShake {
+  0% { -o-transform: rotate(7deg); }
+  20% { -o-transform: rotate(-7deg); }
+  40% { -o-transform: rotate(7deg); }
+  60% { -o-transform: rotate(-7deg); }
+  80% { -o-transform: rotate(7deg); }
+  100% { -o-transform: rotate(0deg); }
+}
+@keyframes logoShake {
+  0% { transform: rotate(7deg); }
+  20% { transform: rotate(-7deg); }
+  40% { transform: rotate(7deg); }
+  60% { transform: rotate(-7deg); }
+  80% { transform: rotate(7deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.logo{
+  @include inline-block;
+  margin: 0;
+  -webkit-animation: logoShake 500ms 1;
+  -moz-animation: logoShake 500ms 1;
+  -o-animation: logoShake 500ms 1;
+  animation: logoShake 500ms 1;
+}

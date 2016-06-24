@@ -1,0 +1,21 @@
+@mixin inline-block() {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+@mixin dot($size) {
+  content: " ";
+  display: inline-block;
+  width: #{$size}rem;
+  height: #{$size}rem;;
+  background: $blue;
+}
+
+@mixin prefixify($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -o-#{$property}: $value;
+  -ms-#{$property}: $value;
+  $property: $value;
+}

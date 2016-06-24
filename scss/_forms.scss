@@ -1,0 +1,50 @@
+@import 'variables';
+@import 'helper';
+
+form {
+  font: $fontAlter;
+  font-weight: 100;
+  .form_field {
+    margin-bottom: .9em;
+  }
+}
+
+input[type="text"],
+input[type="textarea"],
+textarea {
+  font-size: $fontSize * .9;
+  font-style: italic;
+  @include prefixify(border-radius, 3px);
+  border: 1px solid $borderDark;
+  padding: 2%;
+  &.error {
+    border-color: #f00;
+  }
+}
+
+
+input[type="text"],
+input[type="textarea"] {
+  width: 75%;
+}
+
+textarea {
+  width: 100%;
+  height: 12em;
+  resize: none;
+}
+
+input[type="submit"] {
+  font-size: $fontSize * 1.1;
+  letter-spacing: 0;
+  font-weight: 400;
+  background: $blue;
+  color: $white;
+  border: none;
+  padding: 0.5em 2em;
+  @include prefixify(border-radius, 3px);
+  @include prefixify(transition, 250ms all ease-in-out);
+  &:hover {
+    background: $bgGrayHover;
+  }
+}

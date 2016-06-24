@@ -1,0 +1,39 @@
+@import "variables";
+@import "helper";
+
+footer {
+  .wrapper {
+    font-size: $fontSize;
+    color: $fontGray;
+    border-top: 1px solid $borderDark;
+    padding: 3em 0 3em;
+    margin-top: 20px;
+  }
+
+  .social-link {
+    width: 30px;
+    opacity: 0.4;
+    @include inline-block;
+    @include prefixify(transition, all 250ms ease-in-out);
+    &:hover {
+      opacity: 1.0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .logo-foot {
+    letter-spacing: -1px;
+    font-weight: 600;
+    @include prefixify(transition, all 250ms ease-in-out);
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+#copyright {
+  font-size: $fontSize * .8;
+}

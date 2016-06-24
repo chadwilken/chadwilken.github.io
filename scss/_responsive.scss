@@ -1,0 +1,287 @@
+@import 'variables';
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 767px){
+  .header-container header {
+    padding-top: 40px;
+  }
+
+  #masthead {
+    height: 575px;
+  }
+
+  .logo {
+    display: block;
+    text-align: center;
+    font-size: $fontSize * 2.25;
+    line-height: 1.5em;
+  }
+
+  nav.right {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-top: 1.25em;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        display: block;
+      }
+    }
+    a {
+      display: block;
+      font-size: $fontSize * 1.25;
+      width: 90%;
+    }
+  }
+
+  .main-container {
+    font-size: 1em;
+    h3 {
+      font-size: 1.5em;
+    }
+    ul li {
+      line-height: 1.5em;
+    }
+  }
+
+  .main-content {
+    width: 100%;
+    display: block;
+  }
+
+  .right-aside {
+    display: none;
+  }
+
+  .two-third {
+    width: 100%;
+  }
+
+  .three-fourths {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  .third {
+    display: block;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $borderLight;
+    &.last {
+      border-bottom: none;
+      margin-bottom: 20px;
+      padding-bottom: 0;
+    }
+  }
+
+  .half{
+    display: block;
+    margin: 0;
+    width: 100%;
+    &.last{
+      border-left: none;
+      border-top: 1px solid $borderLight;
+      margin-top: 40px;
+      padding-top: 20px;
+    }
+  }
+
+  .cta {
+    margin-top: 5%;
+    h2 {
+      font-size: $fontSize * 2;
+    }
+    h3 {
+      font-size: $fontSize * 1.05;
+    }
+    p {
+      font-size: $fontSize * .9;
+    }
+  }
+
+  #contact {
+    input[type="text"],
+    textarea {
+      width: 96%;
+    }
+  }
+
+  #footer {
+    .left,
+    .right {
+      float: none;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .wrapper {
+      padding: 2em 0 2em;
+      font-size: 1.2em;
+    }
+    #copyright {
+      display: block;
+      font-size: .8em;
+    }
+    .social-link {
+      width: 40px;
+    }
+  }
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 768px)
+and (max-width : 1024px) {
+  .header-container header {
+    padding-top: 40px;
+  }
+
+  #masthead {
+    height: 525px;
+  }
+
+  .logo {
+    display: block;
+    text-align: center;
+    font-size: $fontSize * 3.25;
+    line-height: 1.5em;
+  }
+
+  nav.right {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-top: 1.25em;
+    ul {
+      margin: 0;
+    }
+    a {
+      font-size: $fontSize * 1.25;
+    }
+  }
+
+  .main-container {
+    font-size: 1.25em;
+    h3 {
+      font-size: 1.5em;
+    }
+  }
+
+  .main-content {
+    width: 100%;
+    display: block;
+  }
+
+  .right-aside {
+    display: none;
+  }
+
+  .two-third {
+    width: 100%;
+  }
+
+  .third {
+    display: block;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid $borderLight;
+    &.last {
+      border-bottom: none;
+      margin-bottom: 20px;
+      padding-bottom: 0;
+    }
+  }
+
+  .three-fourths {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  .content {
+    margin-top: 20px;
+  }
+
+  .cta {
+    margin-top: 5%;
+    h2 {
+      font-size: $fontSize * 3;
+    }
+    h3 {
+      font-size: $fontSize * 1.5;
+    }
+  }
+
+  .half{
+    display: block;
+    margin: 0;
+    width: 100%;
+    &.last{
+      border-left: none;
+      border-top: 1px solid $borderLight;
+      margin-top: 40px;
+      padding-top: 20px;
+    }
+  }
+
+  #contact {
+    input[type="text"],
+    textarea {
+      width: 96%;
+    }
+  }
+
+  #footer {
+    .left,
+    .right {
+      float: none;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .wrapper {
+      padding: 2em 0 2em;
+      font-size: 1.2em;
+    }
+    #copyright {
+      font-size: .8em;
+    }
+    .social-link {
+      width: 40px;
+    }
+  }
+}
+
+@media only screen
+and (min-width: 1025px)
+and (max-width: 1220px) {
+  #masthead {
+    height: 800px;
+  }
+
+  .two-third {
+    width: 65%;
+  }
+
+  .cta {
+    h2 {
+      font-size: $fontSize * 4;
+    }
+    h3 {
+      font-size: $fontSize * 1.5;
+    }
+  }
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+
+}
